@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <title>Gurme Restaurant</title>
     <style>
       body,
@@ -60,13 +64,34 @@
   <body>
     <div class="background">
       <h1><span>Gurme</span> Restaurant</h1>
-      <p>Klosterstraße 10, Spandau | Berlin</p>
+      <a
+        style="text-decoration: none"
+        href="https://www.google.com/maps/search/?api=1&query=Klosterstraße+10,+Spandau,+Berlin"
+        target="_blank"
+        ><p>Klosterstraße 10, Spandau | Berlin</p></a
+      >
       <a
         class="address-link"
         href="https://www.google.com/maps/search/?api=1&query=Klosterstraße+10,+Spandau,+Berlin"
         target="_blank"
-        >Adres için tıklayın</a
+        ><i style="margin-right: 8px" class="fa-solid fa-location-dot"></i>Adres
+        için tıklayın</a
       >
     </div>
   </body>
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+
+    function setAddressLinkText() {
+      const linkElement = document.getElementById("address-link");
+
+      if (userLang.startsWith("de")) {
+        linkElement.innerText = "Adresse klicken";
+      } else {
+        linkElement.innerText = "Click here for address";
+      }
+    }
+
+    window.onload = setAddressLinkText;
+  </script>
 </html>
