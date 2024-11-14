@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurme Restaurant</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+      .background {
+        background-image: url("bg_1.png"); /* arka plan resmi burada olacak */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .background h1 {
+        font-size: 3em;
+        margin: 0;
+        color: gold;
+      }
+      .background p {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        color: goldenrod;
+        background-color: rgba(0, 0, 0, 0.604);
+        padding: 10px 20px;
+      }
+      .address-link {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .address-link:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      @media (max-width: 574px) {
+        span {
+          font-size: 2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <h1><span>Gurme</span> Restaurant</h1>
+      <p>Klosterstraße 10, Spandau | Berlin</p>
+      <a
+        class="address-link"
+        href="https://www.google.com/maps/search/?api=1&query=Klosterstraße+10,+Spandau,+Berlin"
+        target="_blank"
+        >Adres için tıklayın</a
+      >
+    </div>
+  </body>
+</html>
